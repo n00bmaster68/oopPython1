@@ -1,0 +1,18 @@
+{% extends "ktLAYOUT.html" %}
+{% block title %}
+	FLIGHTS
+{% endblock %}
+
+{% block body %}
+	<h1>ALL  FLIGHTS</h1>
+	<ul>
+		{%for flight in flights %}
+		<li>
+			<a href="{{ url_for ('flight', flight_id=flight.id) }}">
+				<div>{{ flight.origin }} to {{ flight.destination }}</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
+

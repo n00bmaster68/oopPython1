@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} {% endblock %}</title>
+	<style>
+		body
+		{
+			color: rgb(173,216,230);
+			text-align: center;
+			background-image: url('https://i.pinimg.com/originals/12/c7/c3/12c7c30ba7e9a85b2ca11d0963545b29.jpg');
+			background-repeat: no-repeat;
+		}
+		li
+		{
+			text-align: left;
+		}
+		div
+		{
+			color: rgb(173,216,230);
+		}
+
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/">
+</head>
+	<body>
+		<h1>{% block heading %}{% endblock %}</h1>
+		<h2>Welcome!!!!!!!!!</h2>
+		<div class="container">
+			{% block body %}
+			{% endblock %}
+		</div> 
+	</body>
+</html>

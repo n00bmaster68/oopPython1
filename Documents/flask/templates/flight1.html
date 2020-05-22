@@ -1,0 +1,23 @@
+{% extends "ktLAYOUT.html" %}
+
+{% block title %}
+	FLIGHT
+{% endblock %}
+
+{% block body %}	
+	<h2>FLIGHT DETAILS</h2>
+	<ul>
+		<li>ORIGIN: {{flight.origin}}</li>
+		<li>DESTINATION: {{flight.destination}}</li>
+		<li>DURATION: {{flight.duration}} minutes </li>
+	</ul>
+	<h2>PASSENGERS</h2>
+	<ul>
+		{% for passenger in passengers %}
+			<li> {{passenger.name}} </li>
+		{% else %}
+			<li>NO PASSENGER</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
