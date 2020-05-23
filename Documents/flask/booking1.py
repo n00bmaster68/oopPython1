@@ -23,7 +23,15 @@ def book():
 		return render_template("error.html", message="invalid flight id")
 
 	flight.add_passenger(name)	
-	return render_template("success.html")	
+	return render_template("success.html", flight_id=flight_id, flight=flight)	
+
+def flight(flight_id):
+	flight = Flight.query.get(flight_id)
+	if flight is None:
+		return render_template("error.html", message="invalid flight id")
+
+	passengers = Passenger.query.filter_by(flight_id=flight_id)
+	return render_template("flight2.html", flight=flight, passengers=passengers)
 
 @app.route("/flights")
 def flights():
