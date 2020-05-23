@@ -8,8 +8,7 @@
 	<h3>YOU HAVE SUCCESSFULLY BOOKED YOUR FLIGHT!!!</h3>
 	{% if flight  %}
 		<a href="{{ url_for ('flight', flight_id=flight.id) }}">
-			<h3>CLICK THE BOLLOW STATEMENT FOR MORE INFO: </h3>
-			<div>{{ flight.origin }} to {{ flight.destination }}</div>
+			<h3>CLICK HERE FOR FLIGHT DETAILS.</h3>
 		</a>
     {% endif %}
 {% endblock %}
