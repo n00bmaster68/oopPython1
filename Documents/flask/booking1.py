@@ -31,7 +31,7 @@ def flight(flight_id):
 		return render_template("error.html", message="invalid flight id")
 
 	passengers = Passenger.query.filter_by(flight_id=flight_id)
-	return render_template("flight2.html", flight=flight, passengers=passengers)
+	return render_template("flight1.html", flight=flight, passengers=passengers)
 
 @app.route("/flights")
 def flights():
